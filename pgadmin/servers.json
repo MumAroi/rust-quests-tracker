@@ -1,0 +1,16 @@
+{
+  "Servers": {
+    "1": {
+      "Name": "Quests Tracker DB",
+      "Group": "Servers",
+      "Host": "postgres",
+      "Port": 5432,
+      "MaintenanceDB": "quests_tracker_db",
+      "Username": "postgres",
+      "Comment": "Quests Tracker PostgreSQL Database",
+      "ConnectionParameters": {
+          "sslmode": "prefer"
+      }
+    }
+  }
+}
