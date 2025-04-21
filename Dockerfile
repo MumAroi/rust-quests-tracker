@@ -11,4 +11,4 @@ RUN cargo install cargo-watch
 
 RUN cargo install diesel_cli --no-default-features --features postgres
 
-CMD ["cargo", "watch", "-x", "run"]
+CMD ["cargo", "watch", "-x", "run","--poll"]
