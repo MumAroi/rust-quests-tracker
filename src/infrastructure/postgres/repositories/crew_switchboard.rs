@@ -1,6 +1,6 @@
 use crate::{
     domain::{
-        repositories::crew_switchboard::CrewSwitchBoardRepository,
+        repositories::crew_switchboard::CrewSwitchboardRepository,
         value_objects::quest_adventurer_junction::QuestAdventurerJunctionModel,
     },
     infrastructure::postgres::postgres_connection::PgPoolSquad,
@@ -9,18 +9,18 @@ use anyhow::Result;
 use async_trait::async_trait;
 use std::sync::Arc;
 
-pub struct CrewSwitchBoardPostgres {
+pub struct CrewSwitchboardPostgres {
     db_pool: Arc<PgPoolSquad>,
 }
 
-impl CrewSwitchBoardPostgres {
+impl CrewSwitchboardPostgres {
     pub fn new(db_pool: Arc<PgPoolSquad>) -> Self {
         Self { db_pool }
     }
 }
 
 #[async_trait]
-impl CrewSwitchBoardRepository for CrewSwitchBoardPostgres {
+impl CrewSwitchboardRepository for CrewSwitchboardPostgres {
     async fn join(&self, junction_body_id: QuestAdventurerJunctionModel) -> Result<()> {
         todo!()
     }
