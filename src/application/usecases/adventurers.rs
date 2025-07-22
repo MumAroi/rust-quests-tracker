@@ -1,7 +1,7 @@
 use std::sync::Arc;
 
-use crate::domain::models::adventurer::RegisterAdventurerModel;
-use crate::domain::repositories::adventurer::AdventurerRepository;
+use crate::domain::repositories::adventurers::AdventurerRepository;
+use crate::domain::value_objects::adventurer_model::RegisterAdventurerModel;
 use anyhow::Result;
 
 pub struct AdventurerUseCase<T>

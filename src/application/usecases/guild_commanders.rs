@@ -1,8 +1,7 @@
 use std::sync::Arc;
 
-use crate::domain::entities::guild_commanders::GuildCommanderEntity;
-use crate::domain::models::guild_commander::RegisterGuildCommanderModel;
-use crate::domain::repositories::guild_commander::GuildCommanderRepository;
+use crate::domain::repositories::guild_commanders::GuildCommanderRepository;
+use crate::domain::value_objects::guild_commander_model::RegisterGuildCommanderModel;
 use anyhow::Result;
 
 pub struct GuildCommandersUseCase<T>

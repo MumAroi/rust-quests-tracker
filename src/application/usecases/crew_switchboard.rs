@@ -1,27 +1,27 @@
 use std::sync::Arc;
 
 use crate::domain::repositories::crew_switchboard::CrewSwitchboardRepository;
-use crate::domain::repositories::quest_ops::QuestOpsRepository;
+use crate::domain::repositories::quest_viewing::QuestViewingRepository;
 use anyhow::Result;
 
 pub struct CrewSwitchboardUseCase<T1, T2>
 where
     T1: CrewSwitchboardRepository + Send + Sync,
-    T2: QuestOpsRepository + Send + Sync,
+    T2: QuestViewingRepository + Send + Sync,
 {
     crew_switchboard_repository: Arc<T1>,
-    quest_ops_repository: Arc<T2>,
+    quest_viewing_repository: Arc<T2>,
 }
 
 impl<T1, T2> CrewSwitchboardUseCase<T1, T2>
 where
     T1: CrewSwitchboardRepository + Send + Sync,
-    T2: QuestOpsRepository + Send + Sync,
+    T2: QuestViewingRepository + Send + Sync,
 {
-    pub fn new(crew_switchboard_repository: Arc<T1>, quest_ops_repository: Arc<T2>) -> Self {
+    pub fn new(crew_switchboard_repository: Arc<T1>, quest_viewing_repository: Arc<T2>) -> Self {
         Self {
             crew_switchboard_repository,
-            quest_ops_repository,
+            quest_viewing_repository,
         }
     }
 

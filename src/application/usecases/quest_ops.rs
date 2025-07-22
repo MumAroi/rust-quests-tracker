@@ -1,15 +1,15 @@
 use std::sync::Arc;
 
-use crate::domain::models::quest::AddQuestModel;
-use crate::domain::models::quest::EditQuestModel;
-use crate::domain::repositories::journey_ledger::JourneyLedgerRepository;
+use crate::domain::value_objects::quest_model::AddQuestModel;
+use crate::domain::value_objects::quest_model::EditQuestModel;
 use crate::domain::repositories::quest_ops::QuestOpsRepository;
+use crate::domain::repositories::quest_viewing::QuestViewingRepository;
 use anyhow::Result;
 
 pub struct QuestOpsUseCase<T1, T2>
 where
     T1: QuestOpsRepository + Send + Sync,
-    T2: JourneyLedgerRepository + Send + Sync,
+    T2: QuestViewingRepository + Send + Sync,
 {
     quest_ops_repository: Arc<T1>,
     journey_ledger_repository: Arc<T2>,
@@ -18,7 +18,7 @@ where
 impl<T1, T2> QuestOpsUseCase<T1, T2>
 where
     T1: QuestOpsRepository + Send + Sync,
-    T2: JourneyLedgerRepository + Send + Sync,
+    T2: QuestViewingRepository + Send + Sync,
 {
     pub fn new(quest_ops_repository: Arc<T1>, journey_ledger_repository: Arc<T2>) -> Self {
         Self {

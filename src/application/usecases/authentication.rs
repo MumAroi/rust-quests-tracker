@@ -1,7 +1,7 @@
 use std::sync::Arc;
 
-use crate::domain::repositories::adventurer::AdventurerRepository;
-use crate::domain::repositories::guild_commander::GuildCommanderRepository;
+use crate::domain::repositories::adventurers::AdventurerRepository;
+use crate::domain::repositories::guild_commanders::GuildCommanderRepository;
 use anyhow::Result;
 
 pub struct AuthenticationUseCase<T1, T2>

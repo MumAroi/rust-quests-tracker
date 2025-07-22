@@ -1,7 +1,7 @@
 use std::sync::Arc;
 
-use crate::domain::models::board_checking::BoardCheckingFilter;
-use crate::domain::models::quest::QuestModel;
+use crate::domain::value_objects::board_checking_filter::BoardCheckingFilter;
+use crate::domain::value_objects::quest_model::QuestModel;
 use crate::domain::repositories::quest_viewing::QuestViewingRepository;
 use anyhow::Result;
 
