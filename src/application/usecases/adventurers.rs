@@ -23,7 +23,7 @@ where
 
     pub async fn register(
         &self,
-        mut register_adventurer_model: RegisterAdventurerModel,
+        register_adventurer_model: RegisterAdventurerModel,
     ) -> Result<i32> {
         todo!()
     }

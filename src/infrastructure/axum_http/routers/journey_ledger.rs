@@ -1,5 +1,5 @@
 use axum::{
-    Extension, Json, Router,
+    Extension, Router,
     extract::{Path, State},
     response::IntoResponse,
     routing::patch,
